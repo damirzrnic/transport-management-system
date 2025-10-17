@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Admin Panel – Add / Remove Employees</title>
+
+  <!-- Vendor CSS -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />
+  <link href="assets/css/main.css" rel="stylesheet" />
+</head>
+
+<body>
+  <!-- Header -->
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-center header-transparent">
+    <div class="container d-flex justify-content-between align-items-center">
+      <div class="logo">
+        <h1><a href="em.html">Transportation Management System</a></h1>
+      </div>
+      <nav id="navmenu" class="navmenu">
+  <ul>
+    <li><a href="index.html" class="active">Home</a></li>
+
+    <li class="dropdown extended-dropdown-2">
+      <a href="#"><span>Pages</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+      <ul>
+        <li>
+          <a href="add-company.html">
+            <div class="menu-item-content">
+              <div class="menu-icon"><i class="bi bi-building"></i></div>
+              <div class="menu-text">
+                <span class="menu-title">Add Company</span>
+                <span class="menu-description">Manage carriers and customers</span>
+              </div>
+            </div>
+          </a>
+        </li>
+
+        <li>
+          <a href="tracking.html">
+            <div class="menu-item-content">
+              <div class="menu-icon"><i class="bi bi-geo-alt"></i></div>
+              <div class="menu-text">
+                <span class="menu-title">Tracking</span>
+                <span class="menu-description">Monitor load positions</span>
+              </div>
+            </div>
+          </a>
+        </li>
+
+        <li>
+          <a href="completed-loads.html">
+            <div class="menu-item-content">
+              <div class="menu-icon"><i class="bi bi-check2-circle"></i></div>
+              <div class="menu-text">
+                <span class="menu-title">Completed Loads</span>
+                <span class="menu-description">View completed delivery history</span>
+              </div>
+            </div>
+          </a>
+        </li>
+
+        <li>
+          <a href="employees.html">
+            <div class="menu-item-content">
+              <div class="menu-icon"><i class="bi bi-people"></i></div>
+              <div class="menu-text">
+                <span class="menu-title">Employees</span>
+                <span class="menu-description">Add or remove system users</span>
+              </div>
+            </div>
+          </a>
+        </li>
+
+        <li>
+          <a href="post-quote.html">
+            <div class="menu-item-content">
+              <div class="menu-icon"><i class="bi bi-truck"></i></div>
+              <div class="menu-text">
+                <span class="menu-title">Post Quote / Tender Shipment</span>
+                <span class="menu-description">Create or manage shipment tenders</span>
+              </div>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </li>
+
+    <li><a href="logout.html">Logout</a></li>
+  </ul>
+  <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+</nav>
+
+    </div>
+  </header>
+  <!-- End Header -->
+
+  <!-- Main Content -->
+  <main class="main-content" style="padding-top:130px;">
+    <section id="employee-panel" class="py-5 bg-light">
+      <div class="container">
+        <div class="row g-4 align-items-stretch">
+          <!-- Add Employee Form -->
+          <div class="col-lg-8">
+            <div class="card shadow-sm h-100">
+              <div class="card-header bg-primary text-white">
+                  <h5 class="mb-0">Add New Employee</h5>
+              </div>
+
+              <div class="card-body">
+                <form>
+                  <div class="row mb-3">
+                    <div class="col-md-6">
+                      <label class="form-label">First Name</label>
+                      <input type="text" class="form-control" placeholder="Enter first name" required />
+                    </div>
+                    <div class="col-md-6">
+                      <label class="form-label">Last Name</label>
+                      <input type="text" class="form-control" placeholder="Enter last name" required />
+                    </div>
+                  </div>
+
+                  <div class="row mb-3">
+                    <div class="col-md-6">
+                      <label class="form-label">Email</label>
+                      <input type="email" class="form-control" placeholder="Enter email" required />
+                    </div>
+                    <div class="col-md-6">
+                      <label class="form-label">Phone Number</label>
+                      <input type="text" class="form-control" placeholder="(000) 000-0000" />
+                    </div>
+                  </div>
+
+                  <div class="row mb-3">
+                    <div class="col-md-6">
+                      <label class="form-label">Role</label>
+                      <select class="form-select">
+                        <option default>Select one</option>
+                        <option>Agent</option>
+                        <option>Manager</option>
+                      </select>
+                    </div>
+                    <div class="col-md-6">
+                      <label class="form-label">Hire Date</label>
+                      <input type="date" class="form-control" value="2025-01-01" />
+                    </div>
+                  </div>
+
+                  <div class="mb-3">
+                    <label class="form-label">Notes</label>
+                    <textarea class="form-control" rows="3" placeholder="Add any notes about the employee..."></textarea>
+                  </div>
+
+                  <div class="text-end">
+                    <button type="submit" class="btn btn-success me-2"><i class="bi bi-plus-lg me-1"></i>Add Employee</button>
+                    <button type="reset" class="btn btn-secondary">Clear Form</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+
+          <!-- Employee List -->
+          <div class="col-lg-4">
+            <div class="card shadow-sm h-100">
+              <div class="card-header bg-primary text-white d-flex justify-content-between align-items-center">
+                <h5 class="mb-0">Employee List</h5>
+                <input type="text" class="form-control form-control-sm w-50" placeholder="Search..." />
+              </div>
+
+              <div class="card-body p-0">
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item d-flex justify-content-between align-items-center">
+                    <span>John Doe – Dispatcher</span>
+                    <button class="btn btn-sm btn-outline-danger"><i class="bi bi-trash"></i></button>
+                  </li>
+                  <li class="list-group-item d-flex justify-content-between align-items-center">
+                    <span>Jane Smith – Manager</span>
+                    <button class="btn btn-sm btn-outline-danger"><i class="bi bi-trash"></i></button>
+                  </li>
+                </ul>
+              </div>
+              <div class="card-footer text-center">
+                <nav>
+                  <ul class="pagination pagination-sm justify-content-center mb-0">
+                    <li class="page-item disabled"><a class="page-link" href="#">Previous</a></li>
+                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- JS -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

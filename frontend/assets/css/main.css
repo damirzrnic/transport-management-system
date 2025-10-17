@@ -72,10 +72,18 @@ form {
   overflow: hidden;
 }
 
+form#loginForm label.form-label,
+form#loginForm .form-check-label {
+  color: #000;
+}
+
+
+
 #add-company {
   margin-top: 25px;
-
 }
+
+
 
 a {
   color: var(--accent-color);
@@ -83,10 +91,8 @@ a {
   transition: 0.3s;
 }
 
-a:hover {
-  color: color-mix(in srgb, var(--accent-color), transparent 25%);
-  text-decoration: none;
-}
+
+
 
 h1,
 h2,
@@ -97,6 +103,8 @@ h6 {
   color: var(--heading-color);
   font-family: var(--heading-font);
 }
+
+ 
 
 /* PHP Email Form Messages
 ------------------------------*/
@@ -109,6 +117,8 @@ h6 {
   margin-bottom: 24px;
   font-weight: 600;
 }
+
+
 
 .php-email-form .sent-message {
   display: none;
@@ -5733,6 +5743,12 @@ section,
 #add-company {
   padding-top: 130px; /* Adjust as needed (e.g., 120–150px) */
 }
+
+.card-header.bg-primary, 
+.card-header.bg-primary h5 {
+  color: #fff !important;
+}
+
 
 
 /*--------------------------------------------------------------
