@@ -68,6 +68,15 @@ body {
   font-family: var(--default-font);
 }
 
+form {
+  overflow: hidden;
+}
+
+#add-company {
+  margin-top: 25px;
+
+}
+
 a {
   color: var(--accent-color);
   text-decoration: none;
@@ -155,6 +164,7 @@ h6 {
 
 .header .logo {
   line-height: 1;
+  
 }
 
 .header .logo img {
@@ -168,6 +178,11 @@ h6 {
   font-weight: 700;
   color: var(--heading-color);
   line-height: 1;
+  padding-top: 8px;
+}
+
+.logo h1 {
+  padding-top: 8px;
 }
 
 .scrolled .header {
@@ -1174,6 +1189,11 @@ h6 {
   color: color-mix(in srgb, var(--default-color), transparent 60%);
 }
 
+input[type=password]::placeholder {
+  font-style: normal;
+    font-size: 14px;
+    color: color-mix(in srgb, var(--default-color), transparent 60%);
+}
 .footer .newsletter-form .btn-subscribe {
   background-color: var(--accent-color);
   color: var(--contrast-color);
@@ -5709,6 +5729,11 @@ section,
     grid-template-columns: 1fr;
   }
 }
+
+#add-company {
+  padding-top: 130px; /* Adjust as needed (e.g., 120–150px) */
+}
+
 
 /*--------------------------------------------------------------
 # Starter Section Section

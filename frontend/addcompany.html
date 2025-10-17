@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Add Company | Transportation Management System</title>
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon" />
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Poppins:300,400,500,600,700" rel="stylesheet" />
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet" />
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet" />
+</head>
+
+<body>
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-center header-transparent">
+    <div class="container d-flex justify-content-between align-items-center">
+      <div class="logo">
+        <h1><a href="admin-dashboard.html">TMS Admin Panel</a></h1>
+      </div>
+      <nav id="navmenu" class="navmenu">
+  <ul>
+    <li><a href="index.html" class="active">Home</a></li>
+
+    <li class="dropdown extended-dropdown-2">
+      <a href="#"><span>Pages</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+      <ul>
+        <li>
+          <a href="add-company.html">
+            <div class="menu-item-content">
+              <div class="menu-icon"><i class="bi bi-building"></i></div>
+              <div class="menu-text">
+                <span class="menu-title">Add Company</span>
+                <span class="menu-description">Manage carriers and customers</span>
+              </div>
+            </div>
+          </a>
+        </li>
+
+        <li>
+          <a href="tracking.html">
+            <div class="menu-item-content">
+              <div class="menu-icon"><i class="bi bi-geo-alt"></i></div>
+              <div class="menu-text">
+                <span class="menu-title">Tracking</span>
+                <span class="menu-description">Monitor load positions</span>
+              </div>
+            </div>
+          </a>
+        </li>
+
+        <li>
+          <a href="completed-loads.html">
+            <div class="menu-item-content">
+              <div class="menu-icon"><i class="bi bi-check2-circle"></i></div>
+              <div class="menu-text">
+                <span class="menu-title">Completed Loads</span>
+                <span class="menu-description">View completed delivery history</span>
+              </div>
+            </div>
+          </a>
+        </li>
+
+        <li>
+          <a href="employees.html">
+            <div class="menu-item-content">
+              <div class="menu-icon"><i class="bi bi-people"></i></div>
+              <div class="menu-text">
+                <span class="menu-title">Employees</span>
+                <span class="menu-description">Add or remove system users</span>
+              </div>
+            </div>
+          </a>
+        </li>
+
+        <li>
+          <a href="post-quote.html">
+            <div class="menu-item-content">
+              <div class="menu-icon"><i class="bi bi-truck"></i></div>
+              <div class="menu-text">
+                <span class="menu-title">Post Quote / Tender Shipment</span>
+                <span class="menu-description">Create or manage shipment tenders</span>
+              </div>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </li>
+
+    <li><a href="logout.html">Logout</a></li>
+  </ul>
+  <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+</nav>
+
+    </div>
+  </header>
+  <!-- End Header -->
+
+  <!-- ======= Add Company Section ======= -->
+  <section id="add-company" class="py-5 bg-light">
+  <div class="container">
+    <div class="row g-4 align-items-stretch">
+      <!-- Left: form (70%) -->
+      <div class="col-lg-8 col-12 d-flex">
+        <div class="card shadow w-100 d-flex flex-column">
+          <div class="card-body p-4 flex-grow-1">
+            <h4 class="fw-bold mb-4">Add New Company</h4>
+            <form id="companyForm">
+              <div class="mb-3">
+                <label for="companyName" class="form-label">Company Name</label>
+                <input type="text" class="form-control form-control-lg" id="companyName" placeholder="Enter company name" required />
+              </div>
+
+              <div class="row">
+                <div class="col-md-6 mb-3">
+                  <label for="street1" class="form-label">Street 1</label>
+                  <input type="text" class="form-control" id="street1" placeholder="Street address" required />
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="street2" class="form-label">Street 2 (optional)</label>
+                  <input type="text" class="form-control" id="street2" placeholder="Apt, suite, etc." />
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-4 mb-3">
+                  <label for="city" class="form-label">City</label>
+                  <input type="text" class="form-control" id="city" placeholder="e.g San Jose" required />
+                </div>
+                <div class="col-md-4 mb-3">
+                  <label for="state" class="form-label">State</label>
+                  <input type="text" class="form-control" id="state" placeholder="e.g Oklahoma" required />
+                </div>
+                <div class="col-md-4 mb-3">
+                  <label for="zip" class="form-label">ZIP Code</label>
+                  <input type="text" class="form-control" id="zip" placeholder="e.g 17013" required />
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-4 mb-3">
+                  <label for="mcNumber" class="form-label">MC Number</label>
+                  <input type="text" class="form-control" id="mcNumber" />
+                </div>
+                <div class="col-md-4 mb-3">
+                  <label for="dotNumber" class="form-label">DOT Number</label>
+                  <input type="text" class="form-control" id="dotNumber" />
+                </div>
+                <div class="col-md-4 mb-3">
+                  <label for="feinNumber" class="form-label">FEIN Number</label>
+                  <input type="text" class="form-control" id="feinNumber" />
+                </div>
+              </div>
+
+              <div class="mb-3">
+                <label for="insuranceExpiry" class="form-label">Insurance Expiry Date</label>
+                <input type="date" class="form-control" id="insuranceExpiry" placeholder="2025-01-01" />
+              </div>
+
+              <div class="mb-3">
+                <label for="companyType" class="form-label">Company Type</label>
+                <select class="form-select" id="companyType" required>
+                  <option value="" selected disabled>Select Type</option>
+                  <option value="Carrier">Carrier</option>
+                  <option value="Customer">Customer</option>
+                </select>
+              </div>
+
+              <div class="mb-3">
+                <label for="notes" class="form-label">Notes</label>
+                <textarea class="form-control" id="notes" rows="4" placeholder="Enter any additional details..."></textarea>
+              </div>
+
+              <div class="d-grid mt-3">
+                <button type="submit" class="btn btn-primary btn-lg">Add Company</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: companies list (30%) -->
+      <div class="col-lg-4 col-12 d-flex">
+        <div class="card shadow w-100 d-flex flex-column">
+          <div class="card-body p-4 d-flex flex-column">
+            <div class="d-flex align-items-center mb-3">
+              <h5 class="fw-bold mb-0 me-3">Companies List</h5>
+              <div class="flex-grow-1">
+                <div class="input-group">
+                  <span class="input-group-text bg-primary text-white"><i class="bi bi-search"></i></span>
+                  <input type="text" class="form-control" placeholder="Search companies..." aria-label="Search companies" />
+                </div>
+              </div>
+            </div>
+
+            <ul class="list-group mb-3 flex-grow-1 overflow-auto">
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                Alpha Logistics <span class="badge bg-primary">Carrier</span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                Beta Freight <span class="badge bg-secondary">Customer</span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                Delta Transport <span class="badge bg-primary">Carrier</span>
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                Alpha Logistics <span class="badge bg-primary">Carrier</span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                Beta Freight <span class="badge bg-secondary">Customer</span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                Delta Transport <span class="badge bg-primary">Carrier</span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                Alpha Logistics <span class="badge bg-primary">Carrier</span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                Beta Freight <span class="badge bg-secondary">Customer</span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                Delta Transport <span class="badge bg-primary">Carrier</span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                Alpha Logistics <span class="badge bg-primary">Carrier</span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                Beta Freight <span class="badge bg-secondary">Customer</span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                Delta Transport <span class="badge bg-primary">Carrier</span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                Alpha Logistics <span class="badge bg-primary">Carrier</span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                Beta Freight <span class="badge bg-secondary">Customer</span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                Delta Transport <span class="badge bg-primary">Carrier</span>
+              </li>
+              </li>
+            </ul>
+
+            <nav>
+              <ul class="pagination justify-content-center mb-0">
+                <li class="page-item disabled"><a class="page-link" href="#" tabindex="-1">Previous</a></li>
+                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item"><a class="page-link" href="#">Next</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <!-- End Add Company Section -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer">
+    <div class="container text-center py-3">
+      <div class="copyright">
+        &copy; <script>document.write(new Date().getFullYear())</script> <strong><span>TMS Project</span></strong>. All Rights Reserved
+      </div>
+    </div>
+  </footer>
+  <!-- End Footer -->
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>
