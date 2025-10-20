@@ -5799,6 +5799,29 @@ main.main,
 
 }
 
+.menu-item-content {
+  display: flex;
+  align-items: center;
+  gap: 12px; /* space between icon and text */
+  padding: 6px 10px;
+}
+
+.menu-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  line-height: 1.2;
+}
+
+.menu-title {
+  font-weight: 500;
+  margin-bottom: 2px;
+}
+
+.menu-description {
+  font-size: 0.85rem;
+  color: #6c757d;
+}
 
 /*--------------------------------------------------------------
 # Starter Section Section
