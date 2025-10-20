@@ -36,9 +36,24 @@
     mobileNavToggleBtn.addEventListener('click', mobileNavToogle);
   }
 
-  /**
-   * Hide mobile nav on same-page/hash links
-   */
+/** <-- SPApp Initialization --> */
+
+  var app = $.spapp({
+  defaultView  : "#view_login",
+  templateDir  : "./tpl/",
+  pageNotFound : "error_404"
+});
+
+app.route({
+  view : "view_login",
+  load : "view_login.html",
+  onCreate: function() {  },
+  onReady: function() {  }
+});
+
+app.run();
+
+ 
   document.querySelectorAll('#navmenu a').forEach(navmenu => {
     navmenu.addEventListener('click', () => {
       if (document.querySelector('.mobile-nav-active')) {

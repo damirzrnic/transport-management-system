@@ -2259,6 +2259,23 @@ section,
   background: color-mix(in srgb, var(--default-color), transparent 90%);
 }
 
+header, .header-transparent, .navmenu {
+  overflow: visible !important;
+  z-index: 1050 !important;
+}
+
+.navmenu .dropdown-menu {
+  position: absolute !important;
+  z-index: 2000 !important;
+  top: 100%;
+  left: 0;
+}
+
+main, .main-content, #spapp {
+  padding-top: 120px;
+}
+
+
 .portfolio .portfolio-filters li {
   position: relative;
   cursor: pointer;
@@ -5749,6 +5766,38 @@ section,
   color: #fff !important;
 }
 
+#header {
+  z-index: 1200; 
+}
+
+#header .navmenu,
+#header .navmenu ul,
+#header .navmenu li {
+  overflow: visible;
+}
+
+#header .navmenu .dropdown > ul {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 2000;
+}
+
+:root { --header-offset: 140px; }
+
+
+main#spapp {
+  margin-top: 100px; /* keeps hero and other views below fixed header */
+}
+
+
+#index-page main,
+#spapp,
+main.main,
+.main-content {
+  padding-top: var(--header-offset);
+
+}
 
 
 /*--------------------------------------------------------------
