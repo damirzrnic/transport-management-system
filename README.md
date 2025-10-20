@@ -1,7 +1,7 @@
 # Transportation Management System 
 
 ERD Diagram photo:
-<img src="https://raw.githubusercontent.com/damirzrnic/transportation-management-system/frontend/assets/img/webprojectERD.jpg" width="700">
+![Transportation Management System ERD](https://raw.githubusercontent.com/<your-username>/transport-management-system/main/frontend/assets/img/webprojectERD.jpg)
 
 
 Project created as a part of the "IT 2001: Introduction to Web Programming" course at the IBU
