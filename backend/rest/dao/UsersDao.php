@@ -41,9 +41,9 @@ class UserDao extends BaseDao {
     return $this->connection->lastInsertId();
 }
 
-public function addManager($first_name, $last_name, $email, $password_hash, $role = 'manager', $status = 'active') {
+public function addAdmin($first_name, $last_name, $email, $password_hash, $role = 'admin', $status = 'active') {
     $query = "INSERT INTO " . $this->table_name . " 
-              (first_name, last_name, email, password_hash, role, status, created_at) 
+              (?, ?, ?, ?, ?, ?, ?) 
               VALUES 
               (:first_name, :last_name, :email, :password_hash, :role, :status, NOW())";
 
